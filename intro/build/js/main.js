@@ -6,3 +6,4 @@ let b = '6';
 let c = 2;
 console.log(a / b);
 console.log(c * b);
+// error in ts file but no error in js file
