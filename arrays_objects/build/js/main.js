@@ -25,3 +25,48 @@ let mixed = ['John', 1, false];
 mixed = myTuple;
 // myTuple = mixed
 // error
+// Objects
+let myObj;
+myObj = [];
+console.log(typeof myObj);
+myObj = bands;
+myObj = {};
+const exampleObj = {
+    prop1: 'Dave',
+    prop2: true,
+};
+// exampleObj.prop1 = 56
+// error
+exampleObj.prop1 = "John";
+let evh = {
+    name: "Alan",
+    active: false,
+    albums: [1954, 5150, 'QU12']
+};
+// evh.years = 40;
+// error
+// if any attribute is missing TS will give error
+let jp = {
+    name: "Jimmy",
+    albums: ['I', 'II', 'IV']
+};
+evh = jp;
+const greetGuitarist = (guitarist) => {
+    // checking for name as it is optional field
+    if (guitarist.name) {
+        return `Hello ${guitarist.name.toUpperCase()}!`;
+    }
+    return 'Hello!';
+};
+console.log(greetGuitarist(jp));
+// Enums 
+// "Unlike most TypeScript features, Enums are not a type-level addition to JavaScript but something added to the language and runtime."
+var Grade;
+(function (Grade) {
+    Grade[Grade["U"] = 1] = "U";
+    Grade[Grade["D"] = 2] = "D";
+    Grade[Grade["C"] = 3] = "C";
+    Grade[Grade["B"] = 4] = "B";
+    Grade[Grade["A"] = 5] = "A";
+})(Grade || (Grade = {}));
+console.log(Grade.U);
